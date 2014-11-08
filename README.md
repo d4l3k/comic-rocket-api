@@ -8,6 +8,8 @@ A repository collating all of the information on the internal Comic Rocket API. 
 
 ## ALL_MARKED_COMICS_API_CALL
 
+Returns all of the comics a user is following along with the current page.
+
 ```
 https://www.comic-rocket.com/api/1/marked/
 ```
@@ -28,6 +30,9 @@ Example result:
 
 
 ## GENRE_LIST_API_CALL
+
+Returns a list of genres.
+
 ```
 https://www.comic-rocket.com/api/1/genre/
 ```
@@ -61,11 +66,12 @@ https://www.comic-rocket.com/api/1/login_check/
 Returns `Accepted` or `Status 401: Unauthorized`.
 
 ## Login Page
+
+A page for the user to log into the website.
+
 ```
 https://www.comic-rocket.com/login?next=/api/1/login_check/
 ```
-
-A page for the user to log into the website.
 
 ## LOGOUT_API_CALL
 ```
@@ -75,22 +81,39 @@ https://www.comic-rocket.com/logout
 Logs the user out of the site.
 
 ## NEW_PAGES_API_CALL
+
+While this endpoint appears in the android app, it doesn't actually exist.
+You should use ALL_MARKED_COMICS_API_CALL instead.
+
 ```
 https://www.comic-rocket.com/api/1/marked/to_read/
 ```
 
-While this endpoint appears in the android app, it doesn't actually exist.
-
-
 ## PAGE_URL_API_CALL
+
+Returns the url of a comic page.
 
 ```
 https://www.comic-rocket.com/api/1/serial/%s/%d/
 ```
 
-Unknown at the moment.
+`%s` is the slug of the comic.
+
+`%d` is the page number. Indexing starts at 1.
+
+Example response:
+```json
+{
+  url: "http://www.commitstrip.com/en/2012/02/22/interview/",
+  slug: "commitstrip-english"
+}
+```
+
 
 ## POPULAR_API_CALL
+
+Returns a list of popular comics.
+
 ```
 https://www.comic-rocket.com/api/1/browse/popular/
 ```
@@ -128,11 +151,12 @@ Example response:
 ```
 
 ## RECOMMENDATIONS_API_CALL
+
+This seems to only return an empty array. Potentially it could return a list of comics that you might be interested in.
+
 ```
 https://www.comic-rocket.com/api/1/recommendations/
 ```
-
-This seems to only return an empty array.
 
 Example response:
 ```json
@@ -140,25 +164,29 @@ Example response:
 ```
 
 ## RECOMMENDED_API_CALL
+
+Returns a list of "picks" by Comic Rocket. The format is the same as POPULAR_API_CALL.
+
 ```
 https://www.comic-rocket.com/api/1/browse/picks/
 ```
 
-Returns a list of "picks" by Comic Rocket. The format is the same as POPULAR_API_CALL.
-
 ## SEARCH_API_CALL
+
+Returns a list of matching comics. The format is the same as POPULAR_API_CALL.
+
 ```
 https://www.comic-rocket.com/api/1/search/?q=
 ```
 
-Returns a list of matching comics. The format is the same as POPULAR_API_CALL.
 
 ## SERIALS_IN_GENRE_API_CALL
+
+Returns a list of matching comics. The format is the same as POPULAR_API_CALL.
+
 ```
 https://www.comic-rocket.com/api/1/genre/%s/
 ```
 
 `%s` is a genre id that can be found at https://www.comic-rocket.com/api/1/genre/.
-
-Returns a list of matching comics. The format is the same as POPULAR_API_CALL.
 
