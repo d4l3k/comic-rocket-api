@@ -128,7 +128,7 @@ Example response:
   "genres": [ ],
   "name": "XKCD",
   "idx": 0,
-  "uri": "http"://xkcd.com/1/",
+  "uri": "http://xkcd.com/1/",
   "max_idx": 1443,
   "banner_url": "https"://www.comic-rocket.com/public/banner/xkcd_1.png",
   "slug": "xkcd"
@@ -137,7 +137,7 @@ Example response:
   "genres": [ ],
   "name": "Questionable Content",
   "idx": 0,
-  "uri": "http"://www.questionablecontent.net/view.php?comic=1",
+  "uri": "http://www.questionablecontent.net/view.php?comic=1",
   "max_idx": 2830,
   "banner_url": "https"://www.comic-rocket.com/public/banner/questionable-content.PNG",
   "slug": "questionable-content"
@@ -146,7 +146,7 @@ Example response:
   "genres": [ ],
   "name": "Penny Arcade",
   "idx": 0,
-  "uri": "http"://penny-arcade.com/comic/1998/11/18",
+  "uri": "http://penny-arcade.com/comic/1998/11/18",
   "max_idx": 2462,
   "banner_url": "",
   "slug": "penny-arcade"
