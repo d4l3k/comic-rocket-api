@@ -130,7 +130,7 @@ Example response:
   "idx": 0,
   "uri": "http://xkcd.com/1/",
   "max_idx": 1443,
-  "banner_url": "https"://www.comic-rocket.com/public/banner/xkcd_1.png",
+  "banner_url": "https://www.comic-rocket.com/public/banner/xkcd_1.png",
   "slug": "xkcd"
 }, {
   "rating": "R",
@@ -139,7 +139,7 @@ Example response:
   "idx": 0,
   "uri": "http://www.questionablecontent.net/view.php?comic=1",
   "max_idx": 2830,
-  "banner_url": "https"://www.comic-rocket.com/public/banner/questionable-content.PNG",
+  "banner_url": "https://www.comic-rocket.com/public/banner/questionable-content.PNG",
   "slug": "questionable-content"
 }, {
   "rating": "R",
