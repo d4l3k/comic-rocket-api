@@ -6,18 +6,18 @@ A repository collating all of the information on the internal Comic Rocket API. 
 
 # Endrpoints
 
-## `ALL_MARKED_COMICS_API_CALL`
+## ALL_MARKED_COMICS_API_CALL
 
 ```
 https://www.comic-rocket.com/api/1/marked/
 ```
 
 
-## `GENRE_LIST_API_CALL`
+## GENRE_LIST_API_CALL
 
 https://www.comic-rocket.com/api/1/genre/
 
-## `LOGIN_CHECK_API_CALL`
+## LOGIN_CHECK_API_CALL
 
 ```
 https://www.comic-rocket.com/api/1/login_check/
@@ -27,43 +27,43 @@ Returns `Accepted` or `Status 401: Unauthorized`.
 
 
 
-## `LOGOUT_API_CALL`
-
+## LOGOUT_API_CALL
+```
 https://www.comic-rocket.com/logout
+```
 
-## `NEW_PAGES_API_CALL`
-
+## NEW_PAGES_API_CALL
 ```
 https://www.comic-rocket.com/api/1/marked/to_read/
 ```
 
 
-## `PAGE_URL_API_CALL`
+## PAGE_URL_API_CALL
 
 ```
 https://www.comic-rocket.com/api/1/serial/%s/%d/
 ```
 
-## `POPULAR_API_CALL`
+## POPULAR_API_CALL
 ```
 https://www.comic-rocket.com/api/1/browse/popular/
 ```
-## `RECOMMENDATIONS_API_CALL`
+## RECOMMENDATIONS_API_CALL
 ```
 https://www.comic-rocket.com/api/1/recommendations/
 ```
 
-## `RECOMMENDED_API_CALL`
+## RECOMMENDED_API_CALL
 ```
 https://www.comic-rocket.com/api/1/browse/picks/
 ```
 
-## `SEARCH_API_CALL`
+## SEARCH_API_CALL
 ```
 https://www.comic-rocket.com/api/1/search/?q=
 ```
 
-## `SERIALS_IN_GENRE_API_CALL`
+## SERIALS_IN_GENRE_API_CALL
 ```
 https://www.comic-rocket.com/api/1/genre/%s/
 ```
