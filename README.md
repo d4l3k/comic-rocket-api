@@ -1,4 +1,4 @@
-comic-rocket-api
+Comic Rocket API
 ================
 
 A repository collating all of the information on the internal Comic Rocket API. This information has been extracted from the Comic Rocket android app. Since this information is provided by a third party, the Comic Rocket API may change without warning.

@@ -1,0 +1,14 @@
+source 'https://rubygems.org'
+
+gem 'sinatra'
+gem 'curb'
+gem 'thin'
+gem 'multi_json'
+gem 'nokogiri'
+gem 'hiredis'
+gem 'redis'
+
+group :development do
+  gem 'pry'
+  gem 'shotgun'
+end
