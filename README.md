@@ -40,24 +40,26 @@ https://www.comic-rocket.com/api/1/genre/
 Example result:
 ```json
 [{
-  slug: "abject-nonsense",
-  name: "Abject nonsense"
+  "slug": "abject-nonsense",
+  "name": "Abject nonsense"
 }, {
-  slug: "abstract",
-  name: "Abstract"
+  "slug": "abstract",
+  "name": "Abstract"
 }, {
-  slug: "action",
-  name: "Action"
+  "slug": "action",
+  "name": "Action"
 }, {
-  slug: "action-comedy",
-  name: "Action Comedy"
+  "slug": "action-comedy",
+  "name": "Action Comedy"
 }, {
-  slug: "action-dramedy",
-  name: "Action Dramedy"
+  "slug": "action-dramedy",
+  "name": "Action Dramedy"
 }, ...]
 ```
 
 ## LOGIN_CHECK_API_CALL
+
+A way to check whether a user is logged in or not.
 
 ```
 https://www.comic-rocket.com/api/1/login_check/
@@ -74,11 +76,12 @@ https://www.comic-rocket.com/login?next=/api/1/login_check/
 ```
 
 ## LOGOUT_API_CALL
+
+Logs the user out of the site.
+
 ```
 https://www.comic-rocket.com/logout
 ```
-
-Logs the user out of the site.
 
 ## NEW_PAGES_API_CALL
 
@@ -104,8 +107,8 @@ https://www.comic-rocket.com/api/1/serial/%s/%d/
 Example response:
 ```json
 {
-  url: "http://www.commitstrip.com/en/2012/02/22/interview/",
-  slug: "commitstrip-english"
+  "url": "http://www.commitstrip.com/en/2012/02/22/interview/",
+  "slug": "commitstrip-english"
 }
 ```
 
@@ -121,32 +124,32 @@ https://www.comic-rocket.com/api/1/browse/popular/
 Example response:
 ```json
 [{
-  rating: "PG",
-  genres: [ ],
-  name: "XKCD",
-  idx: 0,
-  uri: "http://xkcd.com/1/",
-  max_idx: 1443,
-  banner_url: "https://www.comic-rocket.com/public/banner/xkcd_1.png",
-  slug: "xkcd"
+  "rating": "PG",
+  "genres": [ ],
+  "name": "XKCD",
+  "idx": 0,
+  "uri": "http"://xkcd.com/1/",
+  "max_idx": 1443,
+  "banner_url": "https"://www.comic-rocket.com/public/banner/xkcd_1.png",
+  "slug": "xkcd"
 }, {
-  rating: "R",
-  genres: [ ],
-  name: "Questionable Content",
-  idx: 0,
-  uri: "http://www.questionablecontent.net/view.php?comic=1",
-  max_idx: 2830,
-  banner_url: "https://www.comic-rocket.com/public/banner/questionable-content.PNG",
-  slug: "questionable-content"
+  "rating": "R",
+  "genres": [ ],
+  "name": "Questionable Content",
+  "idx": 0,
+  "uri": "http"://www.questionablecontent.net/view.php?comic=1",
+  "max_idx": 2830,
+  "banner_url": "https"://www.comic-rocket.com/public/banner/questionable-content.PNG",
+  "slug": "questionable-content"
 }, {
-  rating: "R",
-  genres: [ ],
-  name: "Penny Arcade",
-  idx: 0,
-  uri: "http://penny-arcade.com/comic/1998/11/18",
-  max_idx: 2462,
-  banner_url: "",
-  slug: "penny-arcade"
+  "rating": "R",
+  "genres": [ ],
+  "name": "Penny Arcade",
+  "idx": 0,
+  "uri": "http"://penny-arcade.com/comic/1998/11/18",
+  "max_idx": 2462,
+  "banner_url": "",
+  "slug": "penny-arcade"
 }, ...]
 ```
 
