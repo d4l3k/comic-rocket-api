@@ -6,6 +6,29 @@ A repository collating all of the information on the internal Comic Rocket API. 
 
 # Endpoints
 
+## FEATURED_API_CALL
+
+Returns the comics featured on the main app screen.
+
+```
+https://www.comic-rocket.com/api/1/featured/
+```
+
+Example result:
+```json
+[{
+  "rating": "PG",
+  "genres": [],
+  "name": "The Dreamland Chronicles",
+  "idx": 0,
+  "uri": "http://www.thedreamlandchronicles.com/comic/the-dreamland-chronicles-chapter-one/",
+  "max_idx": 299,
+  "banner_url": "https://www.comic-rocket.com/public/banner/the-dreamland-chronicles_2.gif",
+  "logo": "https://www.comic-rocket.com/public/featured/the-dreamland-chronicles_1.png",
+  "slug": "the-dreamland-chronicles"
+}, ...]
+```
+
 ## ALL_MARKED_COMICS_API_CALL
 
 Returns all of the comics a user is following along with the current page.
@@ -112,6 +135,20 @@ Example response:
 }
 ```
 
+
+## MARK_PAGE_API_CALL
+
+Marks a comic page as read.
+
+```
+https://www.comic-rocket.com/api/1/marked/%s/%d/
+```
+
+`%s` is the slug of the comic.
+
+`%d` is the page number. Indexing starts at 1.
+
+Returns `Accepted` or `Status 401: Unauthorized`.
 
 ## POPULAR_API_CALL
 
