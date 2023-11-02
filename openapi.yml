@@ -1,0 +1,238 @@
+openapi: "3.0.0"
+
+info:
+  title: Comic Rocket API
+  version: '1'
+
+servers:
+  - url: https://www.comic-rocket.com/api/1
+
+paths:
+  /featured:
+    get:
+      responses:
+        default:
+          description: Returns the comics featured on the main app screen.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/featured'
+  /marked:
+    get:
+      responses:
+        default:
+          description: Returns all of the comics a user is following along with the current page.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/comics'
+  /marked/{slug}/{idx}:
+    get:
+      description: Update a comic's bookmark.
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: idx
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        202:
+          description: Comic bookmark updated
+        401:
+          description: Indicates the user is not logged in.
+  /genre:
+    get:
+      responses:
+        default:
+          description: Returns a list of genres.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    slug:
+                      type: string
+  /genre/{slug}:
+    get:
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        default:
+          description: Returns a list of comics in the given genre.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/comics'
+  /serial/{slug}/{idx}:
+    get:
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: idx
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        default:
+          description: Returns the url of a comic page.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  slug:
+                    type: string
+                  url:
+                    type: string
+  /serial_idx_url:
+    get:
+      parameters:
+        - name: slug
+          in: query
+          schema:
+            type: string
+        - name: idx
+          in: query
+          schema:
+            type: integer
+        - name: mark
+          in: query
+          schema:
+            type: boolean
+      responses:
+        default:
+          description: Returns the url of a comic page.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  slug:
+                    type: string
+                  url:
+                    type: string
+  /browse/popular:
+    get:
+      responses:
+        default:
+          description: Returns a list of popular comics.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/comics'
+  /browse/picks:
+    get:
+      responses:
+        default:
+          description: Returns a list of "picks" by Comic Rocket.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/comics'
+  /recommendations:
+    get:
+      responses:
+        default:
+          description: Returns a list of comics you might be interested in.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/comics'
+  /search:
+    get:
+      parameters:
+        - name: q
+          in: query
+          schema:
+            type: string
+      responses:
+        default:
+          description: Returns a list of matching comics.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/comics'
+  /login_check:
+    get:
+      responses:
+        202:
+          description: Indicates the user is logged in.
+        401:
+          description: Indicates the user is not logged in.
+
+components:
+  schemas:
+    comics:
+      type: array
+      items:
+        type: object
+        properties:
+          name:
+            type: string
+          slug:
+            type: string
+          url:
+            type: string
+          banner_url:
+            type: string
+          idx:
+            type: integer
+          max_idx:
+            type: integer
+          rating:
+            type: string
+          genres:
+            type: array
+    featured:
+      type: array
+      items:
+        type: object
+        properties:
+          name:
+            type: string
+          slug:
+            type: string
+          url:
+            type: string
+          logo:
+            type: string
+          banner_url:
+            type: string
+          idx:
+            type: integer
+          max_idx:
+            type: integer
+          rating:
+            type: string
+          genres:
+            type: array
+  securitySchemes:
+    sessionid:
+      type: apiKey
+      name: sessionid
+      in: cookie
+    csrftoken:
+      type: apiKey
+      name: csrftoken
+      in: cookie
+
+security:
+  - sessionid: []
+    csrftoken: []
